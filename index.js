@@ -26,39 +26,74 @@ function randomCommpanyFacts(company) {
   const factCompanyName = document.getElementById('fact-company-name')
   factCompanyName.textContent = company.name
 }
-let score = 0;
-let health = 1;
-const player = document.getElementById("player");
 
-function movePlayerLeft() {
-    const leftNumbers = player.style.left.replace("px", "");
-    const left = parseInt(leftNumbers, 10);
-  
-    if (left > 0) {
-      dodger.style.left = `${left - 5}px`;
-    }
+let playerScore = 0;
+let computerScore = 0;
+let playerInput;
+let compInput;
+//game itself
+//0 = rock 1 = paper 2 = scissors
+
+function game(playerChoice, computerChoice) {
+  if (playerChoice == computerChoice) {return "Tie";}
+  if (playerChoice == 1  && computerChoice == 0) {
+    playerScore++;
+    return "Paper covers rock, Player wins";
   }
-document.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowLeft") {
-      moveDodgerLeft();
-    }
-});
-
-function movePlayerRight() {
-    const rightNumbers = player.style.left.replace("px", "");
-    const right = parseInt(rightNumbers, 10);
-
-    if (right < 360) {dodger.style.right = `${right + 5}px`;}
+  if (playerChoice == 1 && computerChoice == 2) {
+    computerScore++
+    return "Scissors cuts Paper, Computer wins";
+  }
+  if (playerChoice == 0  && computerChoice == 2) {
+    playerScore++;
+    return "Rock beats scissors, Player wins";
+  }
+  if (playerChoice == 0 && computerChoice == 1) {
+    computerScore++
+    return "Paper covers rock, Computer wins";
+  }
+  if (playerChoice == 2  && computerChoice == 1) {
+    playerScore++;
+    return "Scissors cuts Paper, Player wins";
+  }
+  if (playerChoice == 2 && computerChoice == 0) {
+    computerScore++
+    return "Rock beats scissors, Computer wins";
+  }
 }
-document.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowRight") {
-        movePlayerRight();
-    }
-});
 
-function makeRock(){
-    const rock = document.createElement('div')
-
+//Comp choice
+function compChoice(){
+  compInput = Math.floor(Math.random() * 3)
+  console.log(compInput + ' comp Input')
+  return compInput
 }
+
+//0 = rock 1 = paper 2 = scissors
+//Checks input
+//const input = document.querySelector("input");
+//input.addEventListener("keydown", choice);
+//Checks input
+const gameInput = document.getElementById("test");
+gameInput.addEventListener("keydown", choice);
+
+
+function choice(e) {
+    console.log(`${e.code}`)
+    if (`${e.code}` == 'ArrowLeft'){
+      playerInput = 0
+      console.log(game(0,compChoice()))
+    }
+    else if (`${e.code}` == 'ArrowUp'){
+      playerInput = 1
+      console.log(game(1,compChoice()))
+    }
+    else if (`${e.code}` == 'ArrowRight'){
+      playerInput = 2
+      console.log(game(2,compChoice()))
+    }
+    //else (alert('Not valid Input'))
+}
+
 
 
