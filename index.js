@@ -73,8 +73,10 @@ function compChoice(){
 //Checks input
 //const input = document.querySelector("input");
 //input.addEventListener("keydown", choice);
+//Checks input
 const gameInput = document.getElementById("test");
 gameInput.addEventListener("keydown", choice);
+
 
 function choice(e) {
     console.log(`${e.code}`)
