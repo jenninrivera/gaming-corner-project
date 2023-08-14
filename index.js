@@ -4,6 +4,7 @@ let playerInput;
 let compInput;
 
 //game itself
+//0 = rock 1 = paper 2 = scissors
 function game(playerChoice, computerChoice) {
   if (playerChoice == computerChoice) {
     return "Tie";
@@ -35,31 +36,31 @@ function game(playerChoice, computerChoice) {
 }
 //Comp choice
 function compChoice(){
-compInput = Math.floor(Math.random() * 3)
-console.log(compInput + ' comp Input')
-return compInput
+  compInput = Math.floor(Math.random() * 3)
+  console.log(compInput + ' comp Input')
+  return compInput
 }
 
 //0 = rock 1 = paper 2 = scissors
 
 //Checks input
-const input = document.querySelector("input");
+//const input = document.querySelector("input");
+const game = document.getElementById("test");
+test.addEventListener("keydown", choice);
 
-input.addEventListener("keydown", logKey);
-
-function logKey(e) {
+function choice(e) {
     console.log(`${e.code}`)
     if (`${e.code}` == 'ArrowLeft'){
       playerInput = 0
-      console.log(game (0,compChoice()))
+      console.log(game(0,compChoice()))
     }
     else if (`${e.code}` == 'ArrowUp'){
       playerInput = 1
-      console.log(game (1,compChoice()))
+      console.log(game(1,compChoice()))
     }
     else if (`${e.code}` == 'ArrowRight'){
       playerInput = 2
-      console.log(game (2,compChoice()))
+      console.log(game(2,compChoice()))
     }
     else (alert('Not valid Input'))
 }
