@@ -1,8 +1,8 @@
 #game {
-    background-color: #d11c04;
-    height: 400px;
+    /* background-color: #d11c04; */
+    height: 600px;
     margin-right: 20px;
-    margin-top: 150px;
+    margin-top: 70px;
     overflow: hidden;
     position: relative;
     text-align: left;
@@ -23,4 +23,12 @@
     margin: 100px 20px 150px 200px;
     align-items: right;
     display: block;
+  }
+  h2 {
+    margin-left: 50px;
+  }
+  #rps-image {
+    height: 180px;
+    width: 270px;
+    margin-left: 50px;
   }
