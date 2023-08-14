@@ -1,3 +1,6 @@
+fetch('http://localhost:3000/games')
+.then(response => response.json())
+
 let score = 0;
 let health = 1;
 const player = document.getElementById("player");
