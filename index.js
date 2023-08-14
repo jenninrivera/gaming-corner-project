@@ -88,5 +88,3 @@ function choice(e) {
     //else (alert('Not valid Input'))
 }
 
-
-
