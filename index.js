@@ -24,7 +24,7 @@ function randomCommpanyFacts(company) {
   companyFact.textContent = company.description
 
   const factCompanyName = document.getElementById('fact-company-name')
-  factCompanyName = company.name
+  factCompanyName.textContent = company.name
 }
 let score = 0;
 let health = 1;
