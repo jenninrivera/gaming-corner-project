@@ -73,8 +73,8 @@ function compChoice(){
 //Checks input
 //const input = document.querySelector("input");
 //input.addEventListener("keydown", choice);
-const game = document.getElementById("test");
-test.addEventListener("keydown", choice);
+const gameInput = document.getElementById("test");
+gameInput.addEventListener("keydown", choice);
 
 function choice(e) {
     console.log(`${e.code}`)
@@ -90,7 +90,8 @@ function choice(e) {
       playerInput = 2
       console.log(game(2,compChoice()))
     }
-    else (alert('Not valid Input'))
+    //else (alert('Not valid Input'))
 }
+
 
 
