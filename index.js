@@ -24,7 +24,7 @@ function randomCommpanyFacts(company) {
   companyFact.textContent = company.description
 
   const factCompanyName = document.getElementById('fact-company-name')
-  factCompanyName = company.name
+  factCompanyName.textContent = company.name
 }
 
 let playerScore = 0;
@@ -72,6 +72,7 @@ function compChoice(){
 //Checks input
 const gameInput = document.getElementById("test");
 gameInput.addEventListener("keydown", choice);
+
 
 function choice(e) {
     console.log(`${e.code}`)
