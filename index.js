@@ -64,7 +64,6 @@ function game(playerChoice, computerChoice) {
 //Comp choice
 function compChoice(){
   compInput = Math.floor(Math.random() * 3)
-  console.log(compInput + ' comp Input')
   return compInput
 }
 
@@ -73,20 +72,18 @@ function compChoice(){
 const gameInput = document.getElementById("test");
 gameInput.addEventListener("keydown", choice);
 
-
 function choice(e) {
-    console.log(`${e.code}`)
     if (`${e.code}` == 'ArrowLeft'){
       playerInput = 0
-      console.log(game(0,compChoice()))
+      game(0,compChoice())
     }
     else if (`${e.code}` == 'ArrowUp'){
       playerInput = 1
-      console.log(game(1,compChoice()))
+      game(1,compChoice())
     }
     else if (`${e.code}` == 'ArrowRight'){
       playerInput = 2
-      console.log(game(2,compChoice()))
+      game(2,compChoice())
     }
     //else (alert('Not valid Input'))
 }
