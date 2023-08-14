@@ -1,37 +1,64 @@
+fetch('http://localhost:3000/companies')
+.then(response => response.json())
+.then(companies => {
+  companies.forEach(company => {
+    companyNamesOnFactBar(company)
+  }) 
+})
+
+const factBar = document.getElementById('fact-bar')
+
+function companyNamesOnFactBar(company) {
+  const companyName = document.getElementById('companies')
+  companyName.addEventListener('click', () => {
+    randomCommpanyFacts(company)
+  })
+  factBar.appendChild(companyName)
+}
+
+function randomCommpanyFacts(company) {
+  const companyImage = document.getElementById('company-image')
+  companyImage.src = company.image
+
+  const companyFact = document.getElementById('fact-text')
+  companyFact.textContent = company.description
+
+  const factCompanyName = document.getElementById('fact-company-name')
+  factCompanyName = company.name
+}
+
 let playerScore = 0;
 let computerScore = 0;
 let playerInput;
 let compInput;
-
 //game itself
 //0 = rock 1 = paper 2 = scissors
+
 function game(playerChoice, computerChoice) {
-  if (playerChoice == computerChoice) {
-    return "Tie";
-  }
+  if (playerChoice == computerChoice) {alert("Tie")}
   if (playerChoice == 1  && computerChoice == 0) {
     playerScore++;
-    return "Paper covers rock, Player wins";
+    alert("Paper covers rock, Player wins");
   }
   if (playerChoice == 1 && computerChoice == 2) {
     computerScore++
-    return "Scissors cuts Paper, Computer wins";
+    alert("Scissors cuts Paper, Computer wins");
   }
   if (playerChoice == 0  && computerChoice == 2) {
     playerScore++;
-    return "Rock beats scissors, Player wins";
+    alert("Rock beats scissors, Player wins");
   }
   if (playerChoice == 0 && computerChoice == 1) {
     computerScore++
-    return "Paper covers rock, Computer wins";
+    alert("Paper covers rock, Computer wins");
   }
   if (playerChoice == 2  && computerChoice == 1) {
     playerScore++;
-    return "Scissors cuts Paper, Player wins";
+    alert("Scissors cuts Paper, Player wins");
   }
   if (playerChoice == 2 && computerChoice == 0) {
     computerScore++
-    return "Rock beats scissors, Computer wins";
+    alert("Rock beats scissors, Computer wins");
   }
 }
 //Comp choice
@@ -42,11 +69,9 @@ function compChoice(){
 }
 
 //0 = rock 1 = paper 2 = scissors
-
 //Checks input
-//const input = document.querySelector("input");
-const game = document.getElementById("test");
-test.addEventListener("keydown", choice);
+const gameInput = document.getElementById("test");
+gameInput.addEventListener("keydown", choice);
 
 function choice(e) {
     console.log(`${e.code}`)
@@ -62,7 +87,7 @@ function choice(e) {
       playerInput = 2
       console.log(game(2,compChoice()))
     }
-    else (alert('Not valid Input'))
+    //else (alert('Not valid Input'))
 }
 
 

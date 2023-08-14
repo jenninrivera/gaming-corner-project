@@ -1,0 +1,26 @@
+#game {
+    background-color: #d11c04;
+    height: 400px;
+    margin-right: 20px;
+    margin-top: 150px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 400px;
+  }
+  #player {
+    background-color: white;
+    height: 20px;
+    position: absolute;
+    width: 40px;
+  }
+  h1 {
+    text-align: center;
+    font: small-caps 700 70px serif;
+  }
+  #fact-bar {
+    text-align: right;
+    margin: 100px 20px 150px 200px;
+    align-items: right;
+    display: block;
+  }

@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-        <input placeholder="Click here, then press down a key." size="40" />
-    </main>
-	<script defer src="index.js"></script>
-  </body>
+<head>
+  <header>
+    <h1>Gaming Corner</h1>
+  </header>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="test">
+  <div id="game">
+    <h2 id="rps">Rock Paper Scissors</h2>
+    <img id="rock" src="">
+    <img id="paper" src="">
+    <img id="scissors" src="">
+    <p>Instrctions:</p>
+    <ul id="instructions">
+      <li>Press left key to select Rock.</li>
+      <li>Press up key  to select Paper.</li>
+      <li>Press right key to select Scissors.</li>
+    </ul>
+    <h3>Enter name here for current wins out of games played!</h3>
+    <form id="wins-totals">
+      <p id="score-submits"></p>
+      <input id="player-name" type="text" placeholder="Enter your name here">
+    </form>
+  </div>
+  
+  <div id="fact-bar">
+    <h2>Top Gaming Companies</h2>
+    <ul id="companies">
+      <p>Nintendo</p>
+      <p>Activision Blizzard</p>
+      <p>Sony</p>
+      <p>Microsoft</p>
+      <p>Tencent</p>
+    </ul>
+  </div>
+  <div id="company-fact">
+    <img id="company-image" src=""/>
+    <h2 id="fact-company-name"></h2>
+    <p id="fact-text"></p>
+  </div>
+  <script defer type="text/javascript" src="index.js"></script>
+</body>
 </html>
