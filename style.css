@@ -22,13 +22,15 @@
     text-align: right;
     margin: 100px 20px 150px 200px;
     align-items: right;
-    display: block;
   }
   h2 {
     margin-left: 50px;
   }
   #rps-image {
     height: 180px;
-    width: 270px;
+    width: 280px;
     margin-left: 50px;
   }
+#button-image {
+  margin-left: 10px;
+}

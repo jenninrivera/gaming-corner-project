@@ -2,22 +2,26 @@ fetch('http://localhost:3000/companies')
 .then(response => response.json())
 .then(companies => {
   companies.forEach(company => {
-    companyNamesOnFactBar(company)
+    displayCompanyImages(company)
   }) 
-})
+  const randomFactGenerator = document.getElementById("random-fact-generator")
+  randomFactGenerator.addEventListener('click', () => {
+  companies[Math.floor(Math.random() * 5)]
+  // randomCommpanyFacts
+  })}
+)
 
-const factBar = document.getElementById('fact-bar')
+const displayImageBar = document.getElementById('display-company-images')
 
-function companyNamesOnFactBar(company) {
-  const companyName = document.getElementById('companies')
-  companyName.addEventListener('click', () => {
-    randomCommpanyFacts(company)
-  })
-  factBar.appendChild(companyName)
+function displayCompanyImages(company) {
+  const imageTag = document.createElement('img')
+  imageTag.src = company.image
+  displayImageBar.appendChild(imageTag)
 }
 
+const companyImage = document.getElementById('company-image')
+
 function randomCommpanyFacts(company) {
-  const companyImage = document.getElementById('company-image')
   companyImage.src = company.image
 
   const companyFact = document.getElementById('fact-text')
@@ -27,8 +31,18 @@ function randomCommpanyFacts(company) {
   factCompanyName.textContent = company.name
 }
 
+const commentSection = document.getElementById('comment-section')
+commentSection.addEventListener('submit', (event) => {
+  event.preventDefault()
+  const comments = document.createElement('p')
+  const input = document.getElementById('opinion')
+  comments.textContent = input.value
+  commentSection.appendChild(comments)
+
+})
+
 let playerScore = 0;
-let computerScore = 0;
+let totalGames = 0;
 let playerInput;
 let compInput;
 //game itself
