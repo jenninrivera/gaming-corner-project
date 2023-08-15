@@ -1,6 +1,6 @@
 #game {
     /* background-color: #d11c04; */
-    height: 600px;
+    height: 100%;
     margin-right: 20px;
     margin-top: 70px;
     overflow: hidden;
@@ -60,16 +60,22 @@ body {
 }
 #company-fact.flow-child {
   text-align: center;
-  margin-right: 20px;
+  margin-left: 25%;
+  margin-top: 15%;
 }
 #random-fact-generator {
   position: absolute;
-   margin-left: 35%; 
+  margin-left: 35%; 
   display: inline-block;
+  font-size: large;
 }
 #fact-bar.flow-child {
-  /* text-align: center; */
+  
   position: relative;
   align-items: center;
 }
-
+#opinion {
+  height: 100px;
+  width: 250px;
+  text-align: left;
+}
