@@ -5,26 +5,18 @@
     margin-top: 70px;
     overflow: hidden;
     position: relative;
-    text-align: left;
-    width: 400px;
-  }
-  #player {
-    background-color: white;
-    height: 20px;
-    position: absolute;
-    width: 40px;
+    text-align: center;
+    list-style-position: inside;
   }
   h1 {
     text-align: center;
     font: small-caps 700 70px serif;
   }
-  #fact-bar {
-    text-align: right;
-    margin: 100px 20px 150px 200px;
-    align-items: right;
-  }
+
   h2 {
-    margin-left: 50px;
+    
+    text-align: center;
+
   }
   #rps-image {
     height: 180px;
@@ -34,3 +26,49 @@
 #button-image {
   margin-left: 10px;
 }
+body {
+  color: yellow;
+  background-image: url('https://thumbs.gfycat.com/AffectionateDesertedGoa-max-1mb.gif');
+}
+#display-company-images {
+  display: flex;
+  height: 80px;
+  width: 80px;
+}
+.flow-container {
+  padding: 20px;
+  display: flex;
+}
+.flow-child {
+  width: 50%;
+  float: left;
+  padding: 5px;
+  margin-top: 5%;
+}
+#company-fact {
+  position: relative;
+  display: center;
+  height: 200px;
+  width: 400px;
+}
+
+#fact-company-name {
+  position: relative;
+}
+#fact-text {
+  position: relative;
+}
+#company-fact.flow-child {
+  text-align: center;
+  margin-right: 20px;
+}
+#random-fact-generator {
+  margin-left: 30%;
+  display: inline-block;
+}
+#fact-bar.flow-child {
+  /* text-align: center; */
+  position: relative;
+  align-items: center;
+}
+

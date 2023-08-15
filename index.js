@@ -4,13 +4,12 @@ fetch('http://localhost:3000/companies')
   companies.forEach(company => {
     displayCompanyImages(company)
   }) 
-  const randomFactGenerator = document.getElementById("random-fact-generator")
   randomFactGenerator.addEventListener('click', () => {
-  companies[Math.floor(Math.random() * 5)]
-  // randomCommpanyFacts
+  randomCommpanyFacts(companies[Math.floor(Math.random() * 5)])
   })}
 )
 
+const randomFactGenerator = document.getElementById("random-fact-generator")
 const displayImageBar = document.getElementById('display-company-images')
 
 function displayCompanyImages(company) {
@@ -23,6 +22,8 @@ const companyImage = document.getElementById('company-image')
 
 function randomCommpanyFacts(company) {
   companyImage.src = company.image
+  companyImage.style.height = "90%"
+  companyImage.style.width = "90%"
 
   const companyFact = document.getElementById('fact-text')
   companyFact.textContent = company.description
@@ -38,8 +39,9 @@ commentSection.addEventListener('submit', (event) => {
   const input = document.getElementById('opinion')
   comments.textContent = input.value
   commentSection.appendChild(comments)
-
+  commentSection.reset();
 })
+
 
 let playerScore = 0;
 let totalGames = 0;
