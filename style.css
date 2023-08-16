@@ -29,6 +29,9 @@
 body {
   color: yellow;
   background-image: url('https://thumbs.gfycat.com/AffectionateDesertedGoa-max-1mb.gif');
+  /* background-image: url('https://media.tenor.com/oImBzMoEtYgAAAAC/stars-galaxy.gif');
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 #display-company-images {
   display: flex;
@@ -70,7 +73,6 @@ body {
   font-size: large;
 }
 #fact-bar.flow-child {
-  
   position: relative;
   align-items: center;
 }
