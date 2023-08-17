@@ -1,5 +1,4 @@
 #game {
-    /* background-color: #d11c04; */
     height: 100%;
     margin-right: 20px;
     margin-top: 70px;
@@ -29,13 +28,10 @@
 body {
   color: yellow;
   background-image: url('https://thumbs.gfycat.com/AffectionateDesertedGoa-max-1mb.gif');
-  /* background-image: url('https://media.tenor.com/oImBzMoEtYgAAAAC/stars-galaxy.gif');
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 #display-company-images {
   display: flex;
-  height: 10%;
+  height: 8%;
   width: 10%;
 }
 .flow-container {

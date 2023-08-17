@@ -1,5 +1,3 @@
-
-
 fetch('http://localhost:3000/companies')
 .then(response => response.json())
 .then(companies => {
@@ -19,19 +17,18 @@ fetch('http://localhost:3000/comments')
   })
 })
 
-
-
 const randomFactGenerator = document.getElementById("random-fact-generator")
 const displayImageBar = document.getElementById('display-company-images')
 
+//Displays the compnay logo bar on website
 function displayCompanyImages(company) {
   const imageTag = document.createElement('img')
   imageTag.src = company.image
   displayImageBar.appendChild(imageTag)
 }
 
+//Displays the random fact
 const companyImage = document.getElementById('company-image')
-
 function randomCommpanyFacts(company) {
   companyImage.src = company.image
   companyImage.style.height = "90%"
@@ -44,11 +41,12 @@ function randomCommpanyFacts(company) {
   factCompanyName.textContent = company.name
 }
 
+//Reads the comment submitted to change it to an object
 const commentSection = document.getElementById('comment-section')
 commentSection.addEventListener('submit', (event) => {
   event.preventDefault()
   const input = document.getElementById('opinion')
-  // comments.textContent = input.value
+  
   let newCommentObj = {
     comment: input.value
   }
@@ -59,6 +57,7 @@ commentSection.addEventListener('submit', (event) => {
 
 })
 
+//Posts the comment submitted in the form
 function addNewCOmmentObj (newCommentObj) {
   fetch('http://localhost:3000/comments', { 
   method: "POST",
@@ -68,9 +67,10 @@ function addNewCOmmentObj (newCommentObj) {
   body: JSON.stringify (newCommentObj)
   })
 .then(response => response.json())
-// .then(comments => console.log(comments))
+
 }
 
+//Displays the comments from the json file
 function displayComments(newCommentObj) {
   const newComment = document.createElement('p')
   newComment.textContent = newCommentObj.comment
@@ -80,9 +80,8 @@ function displayComments(newCommentObj) {
 
 let playerInput;
 let compInput;
-//game itself
-//0 = rock 1 = paper 2 = scissors
 
+//Game itself
 function game(playerChoice, computerChoice) {
   if (playerChoice == computerChoice) {alert("Tie")}
   if (playerChoice == 1  && computerChoice == 0) {
@@ -110,7 +109,7 @@ function game(playerChoice, computerChoice) {
     alert("Rock beats scissors, Computer wins");
   }
 }
-//Comp choice
+//Computer game choice
 function compChoice(){
   compInput = Math.floor(Math.random() * 3)
   console.log(compInput)
@@ -135,6 +134,5 @@ function choice(e) {
       playerInput = 2
       game(2,compChoice())
     }
-    //else (alert('Not valid Input'))
 }
 
