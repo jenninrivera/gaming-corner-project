@@ -1,3 +1,5 @@
+
+
 fetch('http://localhost:3000/companies')
 .then(response => response.json())
 .then(companies => {
@@ -8,6 +10,16 @@ fetch('http://localhost:3000/companies')
   randomCommpanyFacts(companies[Math.floor(Math.random() * 5)])
   })}
 )
+
+fetch('http://localhost:3000/comments')
+.then(response => response.json())
+.then(commentdata => {
+  commentdata.forEach(comment => {
+    displayComments(comment)
+  })
+})
+
+
 
 const randomFactGenerator = document.getElementById("random-fact-generator")
 const displayImageBar = document.getElementById('display-company-images')
@@ -35,14 +47,35 @@ function randomCommpanyFacts(company) {
 const commentSection = document.getElementById('comment-section')
 commentSection.addEventListener('submit', (event) => {
   event.preventDefault()
-  const comments = document.createElement('p')
   const input = document.getElementById('opinion')
-  comments.textContent = input.value
-  commentSection.appendChild(comments)
+  // comments.textContent = input.value
+  let newCommentObj = {
+    comment: input.value
+  }
+  addNewCOmmentObj(newCommentObj)
+  displayComments(newCommentObj)
   commentSection.reset();
+
+
 })
 
+function addNewCOmmentObj (newCommentObj) {
+  fetch('http://localhost:3000/comments', { 
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify (newCommentObj)
+  })
+.then(response => response.json())
+// .then(comments => console.log(comments))
+}
 
+function displayComments(newCommentObj) {
+  const newComment = document.createElement('p')
+  newComment.textContent = newCommentObj.comment
+  commentSection.appendChild(newComment)
+}
 
 
 let playerInput;

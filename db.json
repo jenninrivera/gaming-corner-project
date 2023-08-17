@@ -1,34 +1,40 @@
 {
-    "companies" : [
-        {
-            "id": 1,
-            "name": "Nintendo",
-            "image": "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/others_3/SI_GenericNintendo_image1280w.jpg",
-            "description": "Did you know that before Nintendo began creating video games, they were a card playing company. Some cards were even made with sexy pinup models."
-        },
-        {
-            "id": 2,
-            "name": "Activision Blizzard",
-            "image": "https://static.wikia.nocookie.net/prototype/images/f/f4/Activision.jpg/revision/latest?cb=20110806151613",
-            "description": "In 2008 Activision strategically merged with Blizzard Entertainment and brought us popular games like Call of Duty, World of Warcraft, and Candy Crush Saga under one roof."
-        },
-        {
-            "id": 3,
-            "name": "Sony",
-            "image": "https://cdn.vox-cdn.com/thumbor/qVD9hm_ofLA4rTQcnLEOn7j65Zw=/0x0:1320x880/1400x788/filters:focal(660x440:661x441)/cdn.vox-cdn.com/uploads/chorus_asset/file/22962825/sonylogo.jpg",
-            "description": "Sony had an annual gaming revenue of 28.2 billion dollars just last year"
-        },
-        {
-            "id": 4,
-            "name": "Microsoft",
-            "image": "https://venturebeat.com/wp-content/uploads/2022/10/Microsoft-Logo-white-bkgd.jpg?fit=1422%2C800&strip=all",
-            "description": "Did you know that Microsoft is the creater of Minecraft, which is the most played game in the world!"
-        },
-        {
-            "id": 5,
-            "name": "Tencent",
-            "image": "https://pbs.twimg.com/profile_images/1246473778684518403/VZbJBFSs_400x400.jpg",
-            "description": "Did you know Tencent is one of the publishers of the famous PUBG Battleground game , which is it's most sold game last year."
-        }
-    ]
+  "companies": [
+    {
+      "id": 1,
+      "name": "Nintendo",
+      "image": "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/others_3/SI_GenericNintendo_image1280w.jpg",
+      "description": "Did you know that before Nintendo began creating video games, they were a card playing company. Some cards were even made with sexy pinup models."
+    },
+    {
+      "id": 2,
+      "name": "Activision Blizzard",
+      "image": "https://static.wikia.nocookie.net/prototype/images/f/f4/Activision.jpg/revision/latest?cb=20110806151613",
+      "description": "In 2008 Activision strategically merged with Blizzard Entertainment and brought us popular games like Call of Duty, World of Warcraft, and Candy Crush Saga under one roof."
+    },
+    {
+      "id": 3,
+      "name": "Sony",
+      "image": "https://cdn.vox-cdn.com/thumbor/qVD9hm_ofLA4rTQcnLEOn7j65Zw=/0x0:1320x880/1400x788/filters:focal(660x440:661x441)/cdn.vox-cdn.com/uploads/chorus_asset/file/22962825/sonylogo.jpg",
+      "description": "Sony had an annual gaming revenue of 28.2 billion dollars just last year"
+    },
+    {
+      "id": 4,
+      "name": "Microsoft",
+      "image": "https://venturebeat.com/wp-content/uploads/2022/10/Microsoft-Logo-white-bkgd.jpg?fit=1422%2C800&strip=all",
+      "description": "Did you know that Microsoft is the creater of Minecraft, which is the most played game in the world!"
+    },
+    {
+      "id": 5,
+      "name": "Tencent",
+      "image": "https://pbs.twimg.com/profile_images/1246473778684518403/VZbJBFSs_400x400.jpg",
+      "description": "Did you know Tencent is one of the publishers of the famous PUBG Battleground game , which is it's most sold game last year."
+    }
+  ],
+  "comments": [
+    {
+      "comment": "hi",
+      "id": 1
+    }
+  ]
 }
